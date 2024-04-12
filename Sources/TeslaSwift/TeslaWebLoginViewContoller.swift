@@ -22,10 +22,7 @@ public class TeslaWebLoginViewController: UIViewController {
 
         // Enable AutoFill Passwords 
         let config = WKWebViewConfiguration()
-        config.websiteDataStore = WKWebsiteDataStore.default()
-        if #available(iOS 11.0, *) {
-            config.websiteDataStore.isPersistent = true
-        }        
+        config.websiteDataStore = WKWebsiteDataStore.default()      
         webView = WKWebView(frame: .zero, configuration: config)
         
         webView.navigationDelegate = self
